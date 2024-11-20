@@ -1,8 +1,9 @@
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.io.IOException;
 
-public class Account {
+public class  Account {
 	// variables
 	private int customerNumber;
 	private int pinNumber;
@@ -232,4 +233,9 @@ public class Account {
 			}
 		}
 	}
+	public void transactionHistory(int id, String transactionType, String accountsType, double amount) throws IOException {
+		BufferedWriter save = new BufferedWriter(new FileWriter("TransactionLog.txt", true));
+		save.write(String.format("%s\t\t%s\t\t%s\t\t%f\n",id, transactionType, accountsType, amount));
+		System.out.println("Saved");
+		save.close}
 }

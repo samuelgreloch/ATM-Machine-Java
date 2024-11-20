@@ -10,6 +10,12 @@ public class OptionMenu {
 	Scanner menuInput = new Scanner(System.in);
 	DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
 	HashMap<Integer, Account> data = new HashMap<Integer, Account>();
+	int customerNumber;
+	int getPinNumber;
+	int cst_no;
+
+
+
 
 	public void getLogin() throws IOException {
 		boolean end = false;
@@ -18,7 +24,7 @@ public class OptionMenu {
 		while (!end) {
 			try {
 				System.out.print("\nEnter your customer number: ");
-				customerNumber = menuInput.nextInt();
+				ewcustomerNumber = menuInput.nextInt();
 				System.out.print("\nEnter your PIN number: ");
 				pinNumber = menuInput.nextInt();
 				Iterator it = data.entrySet().iterator();
